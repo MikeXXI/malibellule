@@ -14,7 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --collectCovergeFrom=src/**/*js--collectCoverageFrom=!src/reportWebVitals.js --collectCoverageFrom=!src/index.js",
+    "jsdoc": "jsdoc -c ./jsdoc.config.json -r -d ./docs",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +35,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@testing-library/dom": "^9.3.4",
+    "babel-jest": "^29.7.0",
+    "jsdoc": "^4.0.2",
+    "react-test-renderer": "^18.2.0"
   }
 }
